@@ -1,10 +1,13 @@
-﻿namespace ElectrumGames.Core.Vehicle.Movement
+﻿using UnityEngine;
+
+namespace ElectrumGames.Core.Vehicle.Movement
 {
     public class GuideWheel : WheelBase, ICanRotate
     {
-        public void Rotate(float direction, float deltaTime)
+        [SerializeField] private float maxRotationAngle = 15;
+        public void Rotate(float direction)
         {
-            throw new System.NotImplementedException();
+            wheel.steerAngle = maxRotationAngle * direction;
         }
     }
 }

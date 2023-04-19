@@ -2,7 +2,7 @@
 {
     public class MotorWithGuideWheel : WheelBase, ICanRotate, IHaveMotor
     {
-        public void Rotate(float direction, float deltaTime)
+        public void Rotate(float direction)
         {
             throw new System.NotImplementedException();
         }
