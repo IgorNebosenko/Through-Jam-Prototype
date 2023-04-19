@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
+using ElectrumGames.Core.Configs;
+using ElectrumGames.Core.Input;
 using ElectrumGames.Core.Vehicle.Movement;
 using UnityEngine;
+using Zenject;
 
 namespace ElectrumGames.Core.Vehicle
 {
@@ -13,6 +16,8 @@ namespace ElectrumGames.Core.Vehicle
         private List<ICanRotate> _rotateWheels;
         private List<IHaveMotor> _motorWheels;
 
+        private IInput _input;
+
         private void Awake()
         {
             _rotateWheels = new List<ICanRotate>(guideWheelsGroup);
@@ -20,6 +25,12 @@ namespace ElectrumGames.Core.Vehicle
 
             _motorWheels = new List<IHaveMotor>(motorWheelsGroup);
             _motorWheels.AddRange(motorWithGuideWheelsGroup);
+        }
+
+        [Inject]
+        private void Construct(InputSchema inputSchema)
+        {
+            _input = new PlayerInput(inputSchema);
         }
     }
 }
