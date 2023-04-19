@@ -2,6 +2,6 @@
 {
     public interface IHaveMotor
     {
-        void AddVelocity(float force, float deltaTime);
+        void AddVelocity(float direction, float deltaTime);
     }
 }

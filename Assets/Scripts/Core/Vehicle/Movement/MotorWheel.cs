@@ -6,11 +6,9 @@ namespace ElectrumGames.Core.Vehicle.Movement
     {
         [SerializeField] private float forceMove = 100;
 
-        public void AddVelocity(float force, float deltaTime)
+        public void AddVelocity(float direction, float deltaTime)
         {
-            wheel.motorTorque = force * deltaTime;
-            //wheel.steerAngle = 10;
-            //transform.DORotate(transform.eulerAngles + Vector3.forward * force * deltaTime, deltaTime);
+            wheel.motorTorque = forceMove * direction * deltaTime;
         }
     }
 }
