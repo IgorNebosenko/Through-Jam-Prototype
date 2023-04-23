@@ -15,6 +15,7 @@ namespace ElectrumGames.Core.Vehicle
 
         private List<ICanRotate> _rotateWheels;
         private List<IHaveMotor> _motorWheels;
+        private VehicleMotor _motor;
 
         private IInput _input;
 
@@ -25,12 +26,23 @@ namespace ElectrumGames.Core.Vehicle
 
             _motorWheels = new List<IHaveMotor>(motorWheelsGroup);
             _motorWheels.AddRange(motorWithGuideWheelsGroup);
+
+            _motor = new VehicleMotor(_rotateWheels, _motorWheels);
         }
 
         [Inject]
         private void Construct(InputSchema inputSchema)
         {
             _input = new PlayerInput(inputSchema);
+            _input.Init();
+        }
+
+        private void FixedUpdate()
+        {
+            var deltaTime = Time.fixedDeltaTime;
+            
+            _input.Update(deltaTime);
+            _motor.Simulate(deltaTime, _input);
         }
     }
 }
