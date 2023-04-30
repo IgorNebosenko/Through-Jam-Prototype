@@ -16,17 +16,11 @@ namespace ElectrumGames.Core.Vehicle.Movement
 
         public void Simulate(float deltaTime, IInput input)
         {
-            if (input.HorizontalDirection != 0f)
-            {
-                foreach (var wheel in _rotateWheels)
-                    wheel.Rotate(input.HorizontalDirection);
-            }
+            foreach (var wheel in _rotateWheels)
+                wheel.Rotate(input.HorizontalDirection);
 
-            if (input.VerticalDirection != 0f)
-            {
-                foreach(var wheel in _motorWheels)
-                    wheel.AddVelocity(input.VerticalDirection, deltaTime);
-            }
+            foreach(var wheel in _motorWheels)
+                wheel.AddVelocity(input.VerticalDirection, deltaTime);
         }
     }
 }

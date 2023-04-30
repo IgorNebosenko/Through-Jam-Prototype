@@ -27,7 +27,11 @@ namespace ElectrumGames.Core.Input
         public void Update(float deltaTime)
         {
             if (!_isMovementUpdated)
+            {
+                HorizontalDirection = 0f;
+                VerticalDirection = 0f;
                 return;
+            }
 
             var inputData = _inputSchema.Player.Movement.ReadValue<Vector2>();
             HorizontalDirection = inputData.x;
