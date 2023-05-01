@@ -116,11 +116,11 @@ WheelCollider:
   m_Mass: 1
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 67.17
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 10
+    m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -244,11 +244,11 @@ WheelCollider:
   m_Mass: 1
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 67.17
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 10
+    m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheel: {fileID: 1627204466360704945}
   visualTransform: {fileID: 5300036635463789390}
-  forceMove: 5000
+  forceMove: 1000
 --- !u!146 &1627204466360704945
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -372,11 +372,11 @@ WheelCollider:
   m_Mass: 1
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 67.17
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 10
+    m_AsymptoteSlip: 80
+    m_AsymptoteValue: 50
+    m_Stiffness: 1.1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheel: {fileID: 2686469829645189319}
   visualTransform: {fileID: 2724790468628687052}
-  forceMove: 5000
+  forceMove: 1000
 --- !u!146 &2686469829645189319
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -596,11 +596,11 @@ WheelCollider:
   m_Mass: 1
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 67.17
+    m_ExtremumSlip: 0.4
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 10
+    m_AsymptoteSlip: 80
+    m_AsymptoteValue: 50
+    m_Stiffness: 1.1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
