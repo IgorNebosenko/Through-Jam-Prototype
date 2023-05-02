@@ -9,7 +9,6 @@ namespace ElectrumGames.Core.Vehicle.Movement
         public void AddVelocity(float direction, float deltaTime)
         {
             wheel.motorTorque = forceMove * direction * deltaTime;
-            Debug.Log(wheel.rpm);
         }
     }
 }
