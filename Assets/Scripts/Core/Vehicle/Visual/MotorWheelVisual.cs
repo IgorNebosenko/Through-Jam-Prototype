@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace ElectrumGames.Core.Vehicle.Visual
 {
     public class MotorWheelVisual : MonoBehaviour, IVehicleVisual
     {
-        public void Simulate(VehicleVisualData data)
+        private const float DegreesInRound = 360f;
+        protected const float DurationRotation = 0.1f;
+        
+        public virtual void Simulate(float deltaTime, VehicleVisualData data)
         {
-            throw new System.NotImplementedException();
+            var rotationAngle = data.rpm * DegreesInRound * deltaTime * DurationRotation;
+            transform.DORotate(transform.eulerAngles +  Vector3.back * rotationAngle, DurationRotation);
         }
     }
 }

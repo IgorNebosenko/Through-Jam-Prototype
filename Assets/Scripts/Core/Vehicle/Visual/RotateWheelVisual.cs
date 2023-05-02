@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace ElectrumGames.Core.Vehicle.Visual
 {
-    public class RotateWheelVisual : MonoBehaviour, IVehicleVisual
+    public class RotateWheelVisual : MotorWheelVisual
     {
-        public void Simulate(VehicleVisualData data)
+        public override void Simulate(float deltaTime, VehicleVisualData data)
         {
-            throw new System.NotImplementedException();
+            base.Simulate(deltaTime, data);
         }
     }
 }

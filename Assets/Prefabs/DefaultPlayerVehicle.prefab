@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 1814010399460687899}
   - component: {fileID: 8401650150330035423}
   - component: {fileID: 4672362946781552110}
+  - component: {fileID: 2594665140186264456}
   m_Layer: 0
   m_Name: VisualMesh
   m_TagString: Untagged
@@ -531,6 +532,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2594665140186264456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609140686561988979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265b31e4a10e4ce68f911723068d6ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4349205822497822334
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +555,7 @@ GameObject:
   - component: {fileID: 8808821886962391874}
   - component: {fileID: 454764402185834881}
   - component: {fileID: 660494536669111485}
+  - component: {fileID: 3533603749978664695}
   m_Layer: 0
   m_Name: VisualMesh
   m_TagString: Untagged
@@ -612,6 +626,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3533603749978664695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349205822497822334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca4508e4f704d84855385f59513f3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4887959728657934411
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +649,7 @@ GameObject:
   - component: {fileID: 9044270006133109410}
   - component: {fileID: 421897649897135406}
   - component: {fileID: 5406666749220735553}
+  - component: {fileID: 7192644640608243703}
   m_Layer: 0
   m_Name: VisualMesh
   m_TagString: Untagged
@@ -693,6 +720,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7192644640608243703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887959728657934411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265b31e4a10e4ce68f911723068d6ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6499959469135548072
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +743,7 @@ GameObject:
   - component: {fileID: 9080379697728685688}
   - component: {fileID: 4943909690247789413}
   - component: {fileID: 5074166397739177372}
+  - component: {fileID: 5762729028036931104}
   m_Layer: 0
   m_Name: VisualMesh
   m_TagString: Untagged
@@ -774,6 +814,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5762729028036931104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499959469135548072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca4508e4f704d84855385f59513f3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7412761731198318420
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +882,12 @@ MonoBehaviour:
   - {fileID: 1627204466360704947}
   - {fileID: 2686469829645189313}
   motorWithGuideWheelsGroup: []
+  rotateWheelVisuals:
+  - {fileID: 2594665140186264456}
+  - {fileID: 7192644640608243703}
+  motorWheelVisuals:
+  - {fileID: 3533603749978664695}
+  - {fileID: 5762729028036931104}
 --- !u!54 &7412761731198318426
 Rigidbody:
   m_ObjectHideFlags: 0
