@@ -48,6 +48,7 @@ MonoBehaviour:
   wheel: {fileID: 1243848148458895825}
   visualTransform: {fileID: 5536516419578648138}
   maxRotationAngle: 15
+  visual: {fileID: 7192644640608243703}
 --- !u!146 &1243848148458895825
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   wheel: {fileID: 1608720672170135756}
   visualTransform: {fileID: 5325693620252306057}
   maxRotationAngle: 15
+  visual: {fileID: 2594665140186264456}
 --- !u!146 &1608720672170135756
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -204,6 +206,7 @@ MonoBehaviour:
   wheel: {fileID: 1627204466360704945}
   visualTransform: {fileID: 5300036635463789390}
   forceMove: 1000
+  visual: {fileID: 3533603749978664695}
 --- !u!146 &1627204466360704945
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -339,7 +342,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2724790468628687052}
-  - component: {fileID: 4421103342735301584}
   - component: {fileID: 2686469829645189313}
   - component: {fileID: 2686469829645189319}
   m_Layer: 0
@@ -364,47 +366,6 @@ Transform:
   m_Father: {fileID: 7412761731198318421}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!23 &4421103342735301584
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686469829645189312}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9671a98a56008e043a1ad16970952a9f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2686469829645189313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,6 +381,7 @@ MonoBehaviour:
   wheel: {fileID: 2686469829645189319}
   visualTransform: {fileID: 2724790468628687052}
   forceMove: 1000
+  visual: {fileID: 5762729028036931104}
 --- !u!146 &2686469829645189319
 WheelCollider:
   m_ObjectHideFlags: 0
@@ -882,12 +844,6 @@ MonoBehaviour:
   - {fileID: 1627204466360704947}
   - {fileID: 2686469829645189313}
   motorWithGuideWheelsGroup: []
-  rotateWheelVisuals:
-  - {fileID: 2594665140186264456}
-  - {fileID: 7192644640608243703}
-  motorWheelVisuals:
-  - {fileID: 3533603749978664695}
-  - {fileID: 5762729028036931104}
 --- !u!54 &7412761731198318426
 Rigidbody:
   m_ObjectHideFlags: 0

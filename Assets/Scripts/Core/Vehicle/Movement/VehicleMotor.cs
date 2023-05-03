@@ -17,7 +17,7 @@ namespace ElectrumGames.Core.Vehicle.Movement
         public void Simulate(float deltaTime, IInput input)
         {
             foreach (var wheel in _rotateWheels)
-                wheel.Rotate(input.HorizontalDirection);
+                wheel.Rotate(input.HorizontalDirection, deltaTime);
 
             foreach(var wheel in _motorWheels)
                 wheel.AddVelocity(input.VerticalDirection, deltaTime);

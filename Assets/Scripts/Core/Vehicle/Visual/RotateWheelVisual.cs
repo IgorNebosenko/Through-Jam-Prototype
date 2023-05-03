@@ -1,13 +1,18 @@
 ﻿using DG.Tweening;
-using UnityEngine;
 
 namespace ElectrumGames.Core.Vehicle.Visual
 {
     public class RotateWheelVisual : MotorWheelVisual
     {
-        public override void Simulate(float deltaTime, VehicleVisualData data)
+        private const float DurationChangeAngle = 0.3f;
+        
+        public override void Simulate(VehicleVisualData data, float deltaTime)
         {
-            base.Simulate(deltaTime, data);
+            base.Simulate(data, deltaTime);
+            var updatedEuler = transform.localEulerAngles;
+            updatedEuler.y = data.rotationAngle;
+            
+            transform.DOLocalRotate(updatedEuler, DurationChangeAngle);
         }
     }
 }

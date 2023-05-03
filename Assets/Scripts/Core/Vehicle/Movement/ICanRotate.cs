@@ -2,6 +2,6 @@
 {
     public interface ICanRotate
     {
-        void Rotate(float direction);
+        void Rotate(float deltaTime, float direction);
     }
 }

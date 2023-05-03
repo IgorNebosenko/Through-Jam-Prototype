@@ -2,6 +2,6 @@
 {
     public interface IVehicleVisual
     {
-        void Simulate(float deltaTime, VehicleVisualData data);
+        void Simulate(VehicleVisualData data, float deltaTime);
     }
 }

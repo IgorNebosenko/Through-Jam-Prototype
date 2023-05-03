@@ -12,14 +12,9 @@ namespace ElectrumGames.Core.Vehicle
     {
         [SerializeField] private GuideWheel[] guideWheelsGroup;
         [SerializeField] private MotorWheel[] motorWheelsGroup;
-        [SerializeField] private MotorWithGuideWheel[] motorWithGuideWheelsGroup;
-        [Space]
-        [SerializeField] private RotateWheelVisual[] rotateWheelVisuals;
-        [SerializeField] private MotorWheelVisual[] motorWheelVisuals;
 
         private List<ICanRotate> _rotateWheels;
         private List<IHaveMotor> _motorWheels;
-        private List<IVehicleVisual> _vehicleVisuals;
 
         private VehicleMotor _motor;
 
@@ -28,15 +23,9 @@ namespace ElectrumGames.Core.Vehicle
         private void Awake()
         {
             _rotateWheels = new List<ICanRotate>(guideWheelsGroup);
-            _rotateWheels.AddRange(motorWithGuideWheelsGroup);
-
             _motorWheels = new List<IHaveMotor>(motorWheelsGroup);
-            _motorWheels.AddRange(motorWithGuideWheelsGroup);
 
             _motor = new VehicleMotor(_rotateWheels, _motorWheels);
-
-            _vehicleVisuals = new List<IVehicleVisual>(rotateWheelVisuals);
-            _vehicleVisuals.AddRange(motorWheelVisuals);
         }
 
         [Inject]
@@ -44,15 +33,6 @@ namespace ElectrumGames.Core.Vehicle
         {
             _input = new PlayerInput(inputSchema);
             _input.Init();
-        }
-
-        private void Update()
-        {
-            Debug.LogWarning("Wheels visual not simulated!");
-            var deltaTime = Time.deltaTime;
-            
-            foreach (var vehicleVisual in _vehicleVisuals)
-                vehicleVisual.Simulate(deltaTime, new VehicleVisualData(10f, 5f));
         }
 
         private void FixedUpdate()
